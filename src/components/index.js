@@ -1,3 +1,4 @@
 import App from './App/App';
+import NavBar from './NavBar/NavBar';
 
-export { App };
+export { App, NavBar };
