@@ -1,10 +1,10 @@
-import React from 'react';
-
+import React, { useState } from 'react';
 import { IoMenu } from 'react-icons/io5';
 import { motion, AnimatePresence } from 'framer-motion';
 import useMatchMedia from 'use-match-media-hook';
 
 import Menu from './Menu/Menu';
+import { Modal } from '../';
 
 import s from './NavBar.module.scss';
 import logo from '../../img/logo.svg';
@@ -26,17 +26,17 @@ const menuList = [
 
 const queries = ['(max-width: 766px)', '(min-width: 767px)'];
 
-const [mobile] = useMatchMedia(queries);
-const [showMobileMenu, setShowMobileMenu] = useState(false);
-const [isSignupOpen, setSignupOpen] = useState(false);
-const [isLoginOpen, setLoginOpen] = useState(false);
-
-const openSignup = () => setSignupOpen(true);
-const closeSignup = () => setSignupOpen(false);
-const openLogin = () => setLoginOpen(true);
-const closeLogin = () => setLoginOpen(false);
-
 function NavBar() {
+  const [mobile] = useMatchMedia(queries);
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [isSignupOpen, setSignupOpen] = useState(false);
+  const [isLoginOpen, setLoginOpen] = useState(false);
+
+  const openSignup = () => setSignupOpen(true);
+  const closeSignup = () => setSignupOpen(false);
+  const openLogin = () => setLoginOpen(true);
+  const closeLogin = () => setLoginOpen(false);
+
   return (
     <>
       <header className={`${s.header} container`}>
@@ -60,10 +60,10 @@ function NavBar() {
       </header>
 
       <Modal open={isSignupOpen} title='Sign Up' handleClose={closeSignup}>
-        <SignUp closeModal={closeSignup} />
+        {/* <SignUp closeModal={closeSignup} /> */}
       </Modal>
       <Modal open={isLoginOpen} title='Sign In' handleClose={closeLogin}>
-        <Login closeModal={closeLogin} />
+        {/* <Login closeModal={closeLogin} /> */}
       </Modal>
     </>
   );
