@@ -1,7 +1,7 @@
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
-import { Button } from 'components/Button';
+import { Button } from '../';
 import classes from './Modal.module.scss';
 
 const overlayVariants = {
@@ -66,4 +66,4 @@ const Modal = (props) => {
   );
 };
 
-export { Modal };
+export default Modal;

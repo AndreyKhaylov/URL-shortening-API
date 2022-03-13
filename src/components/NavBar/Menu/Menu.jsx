@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Button } from '../../';
+
 import s from './Menu.module.scss';
 
 function Menu({ links = [], handleLogin, handleSignup }) {
