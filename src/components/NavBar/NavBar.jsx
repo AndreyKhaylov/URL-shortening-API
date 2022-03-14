@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import useMatchMedia from 'use-match-media-hook';
 
 import Menu from './Menu/Menu';
-import { Modal } from '../';
+import { Modal, Signup, Login } from '../';
 
 import s from './NavBar.module.scss';
 import logo from '../../img/logo.svg';
@@ -60,10 +60,10 @@ function NavBar() {
       </header>
 
       <Modal open={isSignupOpen} title='Sign Up' handleClose={closeSignup}>
-        {/* <SignUp closeModal={closeSignup} /> */}
+        <Signup closeModal={closeSignup} />
       </Modal>
       <Modal open={isLoginOpen} title='Sign In' handleClose={closeLogin}>
-        {/* <Login closeModal={closeLogin} /> */}
+        <Login closeModal={closeLogin} />
       </Modal>
     </>
   );
