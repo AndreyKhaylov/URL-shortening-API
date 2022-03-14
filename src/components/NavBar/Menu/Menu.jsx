@@ -22,11 +22,17 @@ function Menu({ links = [], handleLogin, handleSignup }) {
       </div>
       <div className={s.login}>
         {token ? (
-          <Button onClick={handleLogout}>Logout</Button>
+          <Button onClick={handleLogout} variant='primary'>
+            Logout
+          </Button>
         ) : (
           <>
-            <Button onClick={handleLogin}>Login</Button>
-            <Button onClick={handleSignup}>Signup</Button>
+            <Button onClick={handleLogin} variant='outline'>
+              Login
+            </Button>
+            <Button onClick={handleSignup} variant='primary'>
+              Signup
+            </Button>
           </>
         )}
       </div>
