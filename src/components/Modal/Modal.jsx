@@ -2,7 +2,7 @@ import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import { Button } from '../';
-import classes from './Modal.module.scss';
+import s from './Modal.module.scss';
 
 const overlayVariants = {
   opened: {
@@ -32,7 +32,7 @@ const Modal = (props) => {
       {open && (
         <>
           <motion.div
-            className={classes.overlay}
+            className={s.overlay}
             onClick={handleClose}
             initial='closed'
             animate='opened'
@@ -41,7 +41,7 @@ const Modal = (props) => {
             transition={{ duration: 0.2 }}
           />
           <motion.div
-            className={classes.modal}
+            className={s.modal}
             initial='closed'
             animate='opened'
             exit='closed'
@@ -52,8 +52,8 @@ const Modal = (props) => {
                 <h2>{title}</h2>
               </header>
             )}
-            <div className={classes.modalContent}>{children}</div>
-            <div className={classes.modalAction}>
+            <div className={s.modalContent}>{children}</div>
+            <div className={s.modalAction}>
               <Button className='close' onClick={handleClose}>
                 Close
               </Button>
