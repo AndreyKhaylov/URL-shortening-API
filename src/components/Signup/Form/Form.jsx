@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import s from './Form.module.scss';
-import { Button } from '../../';
+import { Button } from '../..';
 
 const Form = ({ handleClick, title }) => {
   const [email, setEmail] = useState('');
@@ -26,4 +26,4 @@ const Form = ({ handleClick, title }) => {
   );
 };
 
-export { Form };
+export default Form;
