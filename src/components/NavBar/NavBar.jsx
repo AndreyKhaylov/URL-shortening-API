@@ -39,7 +39,7 @@ function NavBar() {
 
   return (
     <>
-      <header className={`${s.header} container`}>
+      <header className={`${s.navbar} container`}>
         <img src={logo} alt='logo' className={s.logo} />
         {mobile ? (
           <IoMenu className={s.burger} onClick={() => setShowMobileMenu(!showMobileMenu)} />
