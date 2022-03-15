@@ -1,9 +1,10 @@
-import { NavBar } from '../';
+import { NavBar, Top } from '../';
 
 function App() {
   return (
     <>
       <NavBar />
+      <Top />
     </>
   );
 }
