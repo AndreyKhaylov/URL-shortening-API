@@ -11,7 +11,7 @@ const data = {
 
 const Top = () => {
   return (
-    <section className={`${s.Top} container`}>
+    <section className={`${s.top} container`}>
       <div className={s.imgContainer}>
         <img src={Img} alt='top' className={s.img} />
       </div>
