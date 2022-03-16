@@ -1,6 +1,6 @@
-import BrandRecognition from '../../images/icon-brand-recognition.svg';
-import DetailedRecord from '../../images/icon-detailed-records.svg';
-import FullyCustomizable from '../../images/icon-fully-customizable.svg';
+import BrandRecognition from '../../img/icon-brand-recognition.svg';
+import DetailedRecord from '../../img/icon-detailed-records.svg';
+import FullyCustomizable from '../../img/icon-fully-customizable.svg';
 
 export const features = {
   title: 'Advanced Statistics',
