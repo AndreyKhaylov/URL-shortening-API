@@ -1,4 +1,4 @@
-import { NavBar, Top, Features, Footer } from '../';
+import { NavBar, Top, Features, Footer, CallToAction } from '../';
 
 function App() {
   return (
@@ -6,6 +6,7 @@ function App() {
       <NavBar />
       <Top />
       <Features />
+      <CallToAction />
       <Footer />
     </>
   );
