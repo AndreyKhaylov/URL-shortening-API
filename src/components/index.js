@@ -6,9 +6,23 @@ import Top from './Top/Top';
 import Features from './Features/Features';
 import Footer from './Footer/Footer';
 import CallToAction from './CallToAction/CallToAction';
+import FormShorten from './FormShorten/FormShorten';
 
 import Signup from '../components/Signup/Signup/Signup';
 import Login from '../components/Signup/Login/Login';
 import Form from '../components/Signup/Form/Form';
 
-export { App, NavBar, Modal, Top, Features, Footer, CallToAction, Button, Signup, Login, Form };
+export {
+  App,
+  NavBar,
+  Modal,
+  Top,
+  Features,
+  Footer,
+  CallToAction,
+  FormShorten,
+  Button,
+  Signup,
+  Login,
+  Form,
+};

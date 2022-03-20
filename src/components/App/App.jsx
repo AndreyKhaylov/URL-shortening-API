@@ -1,10 +1,11 @@
-import { NavBar, Top, Features, Footer, CallToAction } from '../';
+import { NavBar, Top, Features, FormShorten, CallToAction, Footer } from '../';
 
 function App() {
   return (
     <>
       <NavBar />
       <Top />
+      <FormShorten />
       <Features />
       <CallToAction />
       <Footer />
