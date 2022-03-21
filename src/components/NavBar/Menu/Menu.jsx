@@ -22,7 +22,7 @@ function Menu({ links = [], handleLogin, handleSignup }) {
       </div>
       <div className={s.login}>
         {token ? (
-          <Button onClick={handleLogout} variant='primary'>
+          <Button onClick={handleLogout}>
             Logout
           </Button>
         ) : (
@@ -30,7 +30,7 @@ function Menu({ links = [], handleLogin, handleSignup }) {
             <Button onClick={handleLogin} variant='outline'>
               Login
             </Button>
-            <Button onClick={handleSignup} variant='primary'>
+            <Button onClick={handleSignup}>
               Signup
             </Button>
           </>

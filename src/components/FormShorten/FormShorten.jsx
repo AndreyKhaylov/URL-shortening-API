@@ -8,7 +8,7 @@ const FormShorten = () => {
       <div className='container'>
         <form className={s.form} autoComplete='off'>
           <input type='url' placeholder='Shorten a link here...' className={s.input} />
-          <Button variant='square' type='submit' size='medium'>
+          <Button variant='square' type='submit'>
             Shorten it!
           </Button>
         </form>

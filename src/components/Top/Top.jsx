@@ -18,7 +18,7 @@ const Top = () => {
       <article className={s.text}>
         <h1 className={s.title}>{data.title}</h1>
         <p className={s.description}>{data.description}</p>
-        <Button size='large' variant='primary'>
+        <Button size='large'>
           Get Started
         </Button>
       </article>
