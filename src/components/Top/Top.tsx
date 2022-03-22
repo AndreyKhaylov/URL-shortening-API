@@ -1,7 +1,7 @@
 import { Button } from '../';
 
-import s from './Top.module.scss';
-import Img from '../../img/illustration-working.svg';
+const s = require("./Top.module.scss") as any;
+const Img = require("../../img/illustration-working.svg") as string;
 
 const data = {
   title: 'More than just shorter links',
@@ -13,7 +13,7 @@ const Top = () => {
   return (
     <section className={`${s.top} container`}>
       <div className={s.imgContainer}>
-        <img src={Img} alt='top' className={s.img} />
+        <img className={s.img} src={Img} alt='top' />
       </div>
       <article className={s.text}>
         <h1 className={s.title}>{data.title}</h1>
