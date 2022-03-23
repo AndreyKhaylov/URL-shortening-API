@@ -1,8 +1,16 @@
-import s from './Footer.module.scss';
-
+import { FC } from 'react';
 import { footer } from './data';
 
+import { ILinks } from './IFooter';
+
+const s = require("./Footer.module.scss") as any;
 import { ReactComponent as Logo } from '../../img/logo.svg';
+
+
+interface MenuGroupProps {
+  groupTitle: string;
+  links: ILinks[],
+}
 
 const Footer = () => {
   return (
@@ -28,7 +36,7 @@ const Footer = () => {
   );
 };
 
-const MenuGroup = ({ groupTitle, links }) => {
+const MenuGroup: FC<MenuGroupProps> = ({ groupTitle, links }) => {
   return (
     <div className={s.menuGroup}>
       <h4>{groupTitle}</h4>

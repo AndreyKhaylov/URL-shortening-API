@@ -1,9 +1,11 @@
+import { IFooter } from './IFooter';
+
 import { ReactComponent as Facebook } from '../../img/icon-facebook.svg';
 import { ReactComponent as Instagram } from '../../img/icon-instagram.svg';
 import { ReactComponent as Pinterest } from '../../img/icon-pinterest.svg';
 import { ReactComponent as Twitter } from '../../img/icon-twitter.svg';
 
-export const footer = {
+export const footer: IFooter = {
   menu: [
     {
       id: 1,
