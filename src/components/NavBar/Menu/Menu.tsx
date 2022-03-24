@@ -1,10 +1,21 @@
-import React from 'react';
+import {FC} from 'react';
 
 import { Button } from '../../';
 
-import s from './Menu.module.scss';
+const s = require('./Menu.module.scss');
 
-function Menu({ links = [], handleLogin, handleSignup }) {
+interface MenuProps {
+  links: [];
+  handleLogin: () => boolean;
+  handleSignup: () => boolean;
+}
+
+const Menu: FC<MenuProps> = ({ 
+  links = [], 
+  handleLogin, 
+  handleSignup 
+}) => {
+  
   const token = null;
 
   const handleLogout = () => {
