@@ -1,8 +1,16 @@
+import {FC} from 'react';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import { Button } from '../';
-import s from './Modal.module.scss';
+
+const s = require('./Modal.module.scss') as any;
+
+interface ModalProps {
+  open: () => boolean;
+  handleClose: () => boolean;
+  title: string;
+}
 
 const overlayVariants = {
   opened: {
@@ -24,8 +32,8 @@ const modalVariants = {
   },
 };
 
-const Modal = (props) => {
-  const { open, handleClose, title, children } = props;
+const Modal: FC<ModalProps> = (props) => {
+  const { open=false, handleClose, title, children } = props;
 
   return createPortal(
     <AnimatePresence>
