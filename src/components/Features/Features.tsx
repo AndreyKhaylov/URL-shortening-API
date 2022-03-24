@@ -1,6 +1,13 @@
-import s from './Features.module.scss';
-
+import {FC} from 'react';
 import { features } from './data';
+
+const s = require('./Features.module.scss') as any;
+
+interface FeatureItemProps {
+  title: string;
+  body: string;
+  icon: any;
+}
 
 const Features = () => {
   return (
@@ -18,7 +25,7 @@ const Features = () => {
   );
 };
 
-const FeatureItem = ({ title, body, icon }) => (
+const FeatureItem: FC<FeatureItemProps> = ({ title, body, icon }) => (
   <article className={s.item}>
     <figure>
       <img src={icon} alt={title} />

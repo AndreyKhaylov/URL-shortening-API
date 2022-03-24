@@ -1,8 +1,10 @@
+import { IFeatures } from './types';
+
 import BrandRecognition from '../../img/icon-brand-recognition.svg';
 import DetailedRecord from '../../img/icon-detailed-records.svg';
 import FullyCustomizable from '../../img/icon-fully-customizable.svg';
 
-export const features = {
+export const features: IFeatures = {
   title: 'Advanced Statistics',
   description:
     'Track how your links are performing across the web with our advanced statistics dashboard.',
