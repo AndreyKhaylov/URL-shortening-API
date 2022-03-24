@@ -1,6 +1,7 @@
 import {FC} from 'react';
 import cn from 'classnames';
-import s from './Button.module.scss';
+
+const s = require("./Button.module.scss") as any;
 
 interface ButtonProps {
   onClick: () => void;
@@ -10,8 +11,8 @@ interface ButtonProps {
 }
 
 const Button: FC<ButtonProps> = ({ 
-  onClick = f => f, 
-  variant = 'primary', 
+  onClick = (f:void) => f, 
+  variant = 'primary',
   size = 'medium', 
   type = 'button', 
   children 
@@ -19,8 +20,13 @@ const Button: FC<ButtonProps> = ({
   
   const mainCn = cn(s.button, s[size], s[variant]);
 
+  const handleClick = () => onClick
   return (
-    <button className={mainCn} type={type} onClick={onClick}>
+    <button 
+      className={mainCn} 
+      type={type} 
+      onClick={handleClick}
+    >
       {children}
     </button>
   );
