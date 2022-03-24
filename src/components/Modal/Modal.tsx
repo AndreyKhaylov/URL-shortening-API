@@ -7,9 +7,9 @@ import { Button } from '../';
 const s = require('./Modal.module.scss') as any;
 
 interface ModalProps {
-  open: () => boolean;
-  handleClose: () => boolean;
   title: string;
+  open: boolean;
+  handleClose: () => void;
 }
 
 const overlayVariants = {

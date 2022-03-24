@@ -2,12 +2,14 @@ import {FC} from 'react';
 
 import { Button } from '../../';
 
+import { IMenuList } from '../NavBar'
+
 const s = require('./Menu.module.scss');
 
 interface MenuProps {
-  links: [];
-  handleLogin: () => boolean;
-  handleSignup: () => boolean;
+  links: IMenuList[];
+  handleLogin: () => void;
+  handleSignup: () => void;
 }
 
 const Menu: FC<MenuProps> = ({ 
@@ -15,7 +17,7 @@ const Menu: FC<MenuProps> = ({
   handleLogin, 
   handleSignup 
 }) => {
-  
+
   const token = null;
 
   const handleLogout = () => {
