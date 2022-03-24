@@ -1,4 +1,4 @@
-import { IFooter } from './IFooter';
+import { IFooter } from './types';
 
 import { ReactComponent as Facebook } from '../../img/icon-facebook.svg';
 import { ReactComponent as Instagram } from '../../img/icon-instagram.svg';

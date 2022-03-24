@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { footer } from './data';
 
-import { ILinks } from './IFooter';
+import { ILinks } from './types';
 
 const s = require("./Footer.module.scss") as any;
 import { ReactComponent as Logo } from '../../img/logo.svg';
