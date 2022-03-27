@@ -8,12 +8,12 @@ const ShortenItem = () => {
 
   return (
     <section className={s.Shorten}>
-      <div className='container'>
+      <div className="container">
         {links.map((item) => (
           <div key={item.code} className={s.item}>
             <span>{item.original_link}</span>
             <span>{item.full_short_link2}</span>
-            <Button variant='square'>Copy</Button>
+            <Button variant="square">Copy</Button>
           </div>
         ))}
       </div>
