@@ -1,19 +1,31 @@
 import { useForm, SubmitHandler } from 'react-hook-form';
 
 import { Button } from '../';
+import { useAppDispatch } from '../../hooks/ReduxHooks';
+import { createShortLink } from '../../store/slice/ActionCreators';
 
 const s = require('./FormShorten.module.scss') as any;
 
 type formInput = {
   url: string;
-}
+};
 
 const FormShorten = () => {
-  const { register, handleSubmit, formState: {errors}, reset } = useForm<formInput>({
+  const { 
+    register, 
+    handleSubmit, 
+    formState: {errors}, 
+    reset 
+  } = useForm<formInput>({
     mode: 'onSubmit',
-  })
+  });
 
-  const onSubmit: SubmitHandler<formInput> = (data) => console.log(data);
+  const dispatch = useAppDispatch();
+
+  const onSubmit: SubmitHandler<formInput> = ({url}) => {
+    dispatch(createShortLink(url));
+    reset();
+  };
 
   return (
     <section className={s.section}>
