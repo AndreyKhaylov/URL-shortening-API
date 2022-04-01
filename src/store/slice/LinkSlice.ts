@@ -2,8 +2,6 @@ import { createSlice } from "@reduxjs/toolkit";
 
 import { createShortLink } from "./ActionCreators";
 
-import { IResponse } from "./ActionCreators";
-
 interface ILinkSlice {
     links: string[];
     loading: string;
