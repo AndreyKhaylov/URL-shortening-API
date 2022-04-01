@@ -7,9 +7,11 @@ import { setupStore } from './store/configStore';
 
 import './index.css';
 
+const store = setupStore();
+
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={setupStore}>
+    <Provider store={store}>
       <App />
     </Provider>
   </React.StrictMode>,

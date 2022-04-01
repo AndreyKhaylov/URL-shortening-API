@@ -8,13 +8,15 @@ interface ButtonProps {
   variant?: 'square' | 'primary' | 'outline';
   size?: 'small' | 'medium' | 'large';
   type?: 'submit' | 'button';
+  disabled: boolean;
 }
 
 const Button: FC<ButtonProps> = ({ 
   onClick = (f:void) => f, 
   variant = 'primary',
   size = 'medium', 
-  type = 'button', 
+  type = 'button',
+  disabled=false,
   children 
 }) => {
   
@@ -26,6 +28,7 @@ const Button: FC<ButtonProps> = ({
       className={mainCn} 
       type={type} 
       onClick={handleClick}
+      disabled={disabled}
     >
       {children}
     </button>

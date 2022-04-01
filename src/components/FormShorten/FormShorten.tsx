@@ -1,8 +1,9 @@
 import { useForm, SubmitHandler } from 'react-hook-form';
 
 import { Button } from '../';
-import { useAppDispatch } from '../../hooks/ReduxHooks';
+import { useAppDispatch, useAppSelector } from '../../hooks/ReduxHooks';
 import { createShortLink } from '../../store/slice/ActionCreators';
+import { selectLinks, selectLoading } from '../../store/slice/LinkSlice';
 
 const s = require('./FormShorten.module.scss') as any;
 
@@ -21,6 +22,7 @@ const FormShorten = () => {
   });
 
   const dispatch = useAppDispatch();
+  const loading = useAppSelector(selectLoading);
 
   const onSubmit: SubmitHandler<formInput> = ({url}) => {
     dispatch(createShortLink(url));
@@ -39,6 +41,7 @@ const FormShorten = () => {
             type='url'
             className={s.input}
             placeholder='Shorten a link here...'
+            disabled={loading === 'loading'}
             {...register('url', {
               required: 'Please add a link',
               pattern: {
@@ -46,12 +49,17 @@ const FormShorten = () => {
                 message: 'Please enter a valid url',
               }
             }) 
-            } 
+            }
+            style={{
+              outlineColor: errors.url ? 'var(--secondary-300)' : 'currentcolor',
+              outlineWidth: errors.url ? '4px' : '1px',
+            }}
           />
 
           <Button 
             type='submit'
-            variant='square' 
+            variant='square'
+            disabled={loading === 'loading'}
           >
             Shorten it!
           </Button>

@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { RootState } from "../configStore";
 
 import { createShortLink } from "./ActionCreators";
 
@@ -34,5 +35,8 @@ export const linkSlice = createSlice({
         },
     },
 })
+
+export const selectLinks = (state: RootState) => state.links.links;
+export const selectLoading = (state: RootState) => state.links.loading;
 
 export default linkSlice.reducer;
