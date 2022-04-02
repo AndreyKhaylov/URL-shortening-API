@@ -1,10 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { IResponse } from "../../types/IResponce";
 import { RootState } from "../configStore";
 
 import { createShortLink } from "./ActionCreators";
 
 interface ILinkSlice {
-    links: string[];
+    links: any[];
     loading: string;
 }
 
@@ -25,7 +26,7 @@ export const linkSlice = createSlice({
             state.loading = 'loading'
         },
         [createShortLink.fulfilled.type]: (state, action) => {
-            const { ok, result } = action.payload;
+            const { ok, result }: IResponse = action.payload;
             if(ok) {
                 state.links.push(result);
                 state.loading = 'idle'

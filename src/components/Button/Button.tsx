@@ -8,7 +8,7 @@ interface ButtonProps {
   variant?: 'square' | 'primary' | 'outline';
   size?: 'small' | 'medium' | 'large';
   type?: 'submit' | 'button';
-  disabled: boolean;
+  disabled?: boolean;
 }
 
 const Button: FC<ButtonProps> = ({ 
@@ -16,7 +16,7 @@ const Button: FC<ButtonProps> = ({
   variant = 'primary',
   size = 'medium', 
   type = 'button',
-  disabled=false,
+  disabled = false,
   children 
 }) => {
   

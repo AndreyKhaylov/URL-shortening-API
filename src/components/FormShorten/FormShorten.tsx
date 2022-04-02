@@ -1,9 +1,9 @@
 import { useForm, SubmitHandler } from 'react-hook-form';
 
 import { Button } from '../';
-import { useAppDispatch, useAppSelector } from '../../hooks/ReduxHooks';
+import { useAppDispatch, useAppSelector } from '../../hooks/reduxHooks';
 import { createShortLink } from '../../store/slice/ActionCreators';
-import { selectLinks, selectLoading } from '../../store/slice/LinkSlice';
+import { selectLoading } from '../../store/slice/LinkSlice';
 
 const s = require('./FormShorten.module.scss') as any;
 
