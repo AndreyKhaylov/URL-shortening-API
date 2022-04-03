@@ -1,4 +1,4 @@
-interface IResult {
+export interface IResult {
     code: string;
     short_link: string;
     full_short_link: string;
