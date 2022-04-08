@@ -1,3 +1,4 @@
+import React from 'react';
 import { NavBar, Top, Features, FormShorten, CallToAction, Footer } from '../';
 
 function App() {

@@ -1,7 +1,7 @@
-import {FC} from 'react';
+import React, { FC } from 'react';
 import cn from 'classnames';
 
-const s = require("./Button.module.scss") as any;
+import s from './Button.module.scss';
 
 interface ButtonProps {
   onClick: () => void;

@@ -1,7 +1,7 @@
-import {FC} from 'react';
+import React, { FC } from 'react';
 import { features } from './data';
 
-const s = require('./Features.module.scss') as any;
+import s from './Features.module.scss';
 
 interface FeatureItemProps {
   title: string;

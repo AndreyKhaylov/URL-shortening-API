@@ -1,7 +1,8 @@
+import React from 'react';
 import { Button } from '../';
 
-const s = require("./Top.module.scss") as any;
-const Img = require("../../img/illustration-working.svg") as string;
+import s from './Top.module.scss';
+import Img from '../../img/illustration-working.svg';
 
 const data = {
   title: 'More than just shorter links',

@@ -1,3 +1,4 @@
+import React from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 
 import { Button } from '../';
@@ -5,7 +6,7 @@ import { useAppDispatch, useAppSelector } from '../../hooks/reduxHooks';
 import { createShortLink } from '../../store/slice/ActionCreators';
 import { selectLoading } from '../../store/slice/LinkSlice';
 
-const s = require('./FormShorten.module.scss') as any;
+import s from './FormShorten.module.scss';
 
 type formInput = {
   url: string;

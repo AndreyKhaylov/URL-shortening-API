@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useAppSelector } from '../../hooks/reduxHooks';
 import { AnimatePresence, motion} from 'framer-motion';
 
 import { selectLinks } from '../../store/slice/LinkSlice';
 import Button from '../Button/Button';
 
-const s = require('./ShortenItem.module.scss') as any;
+import s from './ShortenItem.module.scss';
 
 const ShortenItem = () => {
   const [copiedLink, setCopiedLink] = useState<string | null>(null);

@@ -1,10 +1,9 @@
-import {FC} from 'react';
+import React, { FC } from 'react';
 
 import { Button } from '../../';
-
 import { IMenuList } from '../NavBar'
 
-const s = require('./Menu.module.scss');
+import s from './Menu.module.scss';
 
 interface MenuProps {
   links: IMenuList[];

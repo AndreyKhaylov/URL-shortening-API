@@ -1,10 +1,10 @@
-import {FC} from 'react';
+import React, { FC } from 'react';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import { Button } from '../';
 
-const s = require('./Modal.module.scss') as any;
+import s from './Modal.module.scss';
 
 interface ModalProps {
   title: string;

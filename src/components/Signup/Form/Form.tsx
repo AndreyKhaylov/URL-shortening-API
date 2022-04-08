@@ -1,8 +1,8 @@
-import { FC, useState } from 'react';
+import React, { FC, useState } from 'react';
 
 import { Button } from '../../';
 
-const s = require('./Form.module.scss') as any;
+import s from './Form.module.scss';
 
 interface FormProps {
   title: string;

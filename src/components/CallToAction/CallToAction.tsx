@@ -1,4 +1,6 @@
-const s = require('./CallToAction.module.scss') as any;
+import React from 'react';
+
+import s from './CallToAction.module.scss';
 
 import { Button } from '../';
 

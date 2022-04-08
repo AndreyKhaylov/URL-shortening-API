@@ -1,13 +1,13 @@
-import { useState, FC } from 'react';
+import React, { useState } from 'react';
 import { IoMenu } from 'react-icons/io5';
 import { motion, AnimatePresence } from 'framer-motion';
 import useMatchMedia from 'use-match-media-hook';
 
 import Menu from './Menu/Menu';
-import { Modal, Signup, Login } from '..';
+import { Modal, Signup, Login } from '../';
 
 import logo from '../../img/logo.svg';
-const s = require('./NavBar.module.scss') as any;
+import s from './NavBar.module.scss';
 
 export interface IMenuList {
   url: string;
