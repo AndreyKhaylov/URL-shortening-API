@@ -22,12 +22,11 @@ const Button: FC<ButtonProps> = ({
   
   const mainCn = cn(s.button, s[size], s[variant]);
 
-  const handleClick = () => onClick
   return (
     <button 
       className={mainCn} 
       type={type} 
-      onClick={handleClick}
+      onClick={() => onClick()}
       disabled={disabled}
     >
       {children}

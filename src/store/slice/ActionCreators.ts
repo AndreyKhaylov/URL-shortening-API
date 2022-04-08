@@ -9,7 +9,7 @@ export const createShortLink = createAsyncThunk(
     async (url: string, thunkAPI) => {
         try {
             const response = await axios.post<IResponse>(API_BASE_URL + url)
-            return response;
+            return response.data;
         } catch(e) {
             thunkAPI.rejectWithValue(e)
         }

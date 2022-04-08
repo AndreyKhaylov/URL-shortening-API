@@ -14,7 +14,7 @@ const ShortenItem = () => {
 
   const copyToClipboard = (link: string) => {
     navigator.clipboard.writeText(link).then(() => {
-        setCopiedLink(link);
+      setCopiedLink(link);
     })
   };
 

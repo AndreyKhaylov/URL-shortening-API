@@ -34,8 +34,8 @@ const FormShorten = () => {
     <section className={s.section}>
       <div className='container'>
         <form
-          onSubmit = { handleSubmit(onSubmit)}
-          className={s.form} 
+          onSubmit = {handleSubmit(onSubmit)}
+          className={s.form}
           autoComplete='off'>
 
           <input
@@ -70,7 +70,6 @@ const FormShorten = () => {
               {errors.url.message}
             </p>
           )}
-
         </form>
       </div>
     </section>
