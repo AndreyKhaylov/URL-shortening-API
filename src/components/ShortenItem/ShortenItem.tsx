@@ -32,7 +32,14 @@ const ShortenItem = () => {
               animate={{opacity: 1, height: 'auto'}}
             >
               <span>{item.original_link}</span>
-              <span>{item.full_short_link2}</span>
+              <span>
+                <a href={item.full_short_link2} 
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                  {item.full_short_link2}
+                </a>
+              </span>
               <Button 
                 variant="square"
                 onClick={() => copyToClipboard(item.full_short_link2)}
