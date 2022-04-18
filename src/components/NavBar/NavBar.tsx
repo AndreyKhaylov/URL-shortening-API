@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { IoMenu } from 'react-icons/io5';
+import { BsMoonFill, BsMoon } from 'react-icons/bs';
 import { motion, AnimatePresence } from 'framer-motion';
 import useMatchMedia from 'use-match-media-hook';
 
@@ -34,13 +35,23 @@ const queries = ['(max-width: 766px)', '(min-width: 767px)'];
 function NavBar() {
   const [mobile] = useMatchMedia(queries);
   const [showMobileMenu, setShowMobileMenu] = useState<boolean>(false);
+
   const [isSignupOpen, setSignupOpen] = useState<boolean>(false);
   const [isLoginOpen, setLoginOpen] = useState<boolean>(false);
+
+  const [theme, setTheme] = useState<string>('light')
+
+  useEffect(() => {
+    document.body.setAttribute('data-theme', theme)
+  }, [theme])
+
+  const handleTheme = () => setTheme(theme === 'light' ? 'dark' : 'light')
 
   const openSignup = () => setSignupOpen(true);
   const closeSignup = () => setSignupOpen(false);
   const openLogin = () => setLoginOpen(true);
   const closeLogin = () => setLoginOpen(false);
+  
 
   return (
     <>
@@ -51,6 +62,15 @@ function NavBar() {
         ) : (
           <Menu links={menuList} handleSignup={openSignup} handleLogin={openLogin} />
         )}
+
+        <div onClick={handleTheme}>
+            {theme === 'light' 
+              ? <BsMoonFill size='18px'/>
+              : <BsMoon size='18px'/>
+            }
+          {theme} theme
+        </div>
+
         <AnimatePresence>
           {showMobileMenu && mobile && (
             <motion.div
