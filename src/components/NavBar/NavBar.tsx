@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { IoMenu } from 'react-icons/io5';
-import { BsMoonFill, BsMoon } from 'react-icons/bs';
 import { motion, AnimatePresence } from 'framer-motion';
 import useMatchMedia from 'use-match-media-hook';
 
 import Menu from './Menu/Menu';
 import { Modal, Signup, Login } from '../';
 
-import logo from '../../img/logo.svg';
+import { ReactComponent as Logo } from '../../img/logo.svg';
 import s from './NavBar.module.scss';
 
 export interface IMenuList {
@@ -39,38 +38,26 @@ function NavBar() {
   const [isSignupOpen, setSignupOpen] = useState<boolean>(false);
   const [isLoginOpen, setLoginOpen] = useState<boolean>(false);
 
-  const [theme, setTheme] = useState<string>('light')
-
-  useEffect(() => {
-    document.body.setAttribute('data-theme', theme)
-  }, [theme])
-
-  const handleTheme = () => setTheme(theme === 'light' ? 'dark' : 'light')
 
   const openSignup = () => setSignupOpen(true);
   const closeSignup = () => setSignupOpen(false);
   const openLogin = () => setLoginOpen(true);
   const closeLogin = () => setLoginOpen(false);
   
-
   return (
     <>
       <header className={`${s.navbar} container`}>
-        <img src={logo} alt='logo' className={s.logo} />
+        <Logo className={s.logo} />
         {mobile ? (
-          <IoMenu className={s.burger} onClick={() => setShowMobileMenu(!showMobileMenu)} />
+          <IoMenu 
+            className={s.burger} 
+            onClick={() => setShowMobileMenu(!showMobileMenu)} />
         ) : (
-          <Menu links={menuList} handleSignup={openSignup} handleLogin={openLogin} />
+          <Menu 
+            links={menuList} 
+            handleSignup={openSignup} 
+            handleLogin={openLogin} />
         )}
-
-        <div onClick={handleTheme}>
-            {theme === 'light' 
-              ? <BsMoonFill size='18px'/>
-              : <BsMoon size='18px'/>
-            }
-          {theme} theme
-        </div>
-
         <AnimatePresence>
           {showMobileMenu && mobile && (
             <motion.div

@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '../';
 
 import s from './Top.module.scss';
-import Img from '../../img/illustration-working.svg';
+import {ReactComponent as Img} from '../../img/illustration-working.svg';
 
 const data = {
   title: 'More than just shorter links',
@@ -14,7 +14,7 @@ const Top = () => {
   return (
     <section className={`${s.top} container`}>
       <div className={s.imgContainer}>
-        <img className={s.img} src={Img} alt='top' />
+        <Img className={s.img}/>
       </div>
       <article className={s.text}>
         <h1 className={s.title}>{data.title}</h1>

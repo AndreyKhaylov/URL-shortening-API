@@ -12,10 +12,10 @@
 }
 
 .imgContainer {
-  width: 100;
+  width: 100%;
 
   @media (min-width: 767px) {
-    width: 50%;
+    width: 100%;
   }
 }
 
@@ -23,12 +23,16 @@
   width: 150%;
   flex-grow: 0;
 
+  path:first-child {
+    fill: var(--colors-bg-svg-working);
+  }
+
   @media (min-width: 767px) {
     width: 100%;
   }
 
   @media (min-width: 1024px) {
-    width: 120%;
+    width: 140%;
   }
 }
 

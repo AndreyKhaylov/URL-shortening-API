@@ -1,11 +1,11 @@
 .Shorten {
-  background-color: var(--bg-light);
+  background-color: var(--colors-bg);
   padding: 3rem 0 0;
 }
 
 .item {
   display: block;
-  background-color: white;
+  background-color: var(--colors-ui-base);
   border-radius: var(--radii-sm);
   display: flex;
   flex-direction: column;

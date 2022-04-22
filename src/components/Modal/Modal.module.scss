@@ -10,7 +10,7 @@
 
 .modal {
   z-index: 6;
-  background-color: #fff;
+  background-color: var(--colors-bg);
   padding: 1rem;
   width: 300px;
   border-radius: var(--radii-sm);

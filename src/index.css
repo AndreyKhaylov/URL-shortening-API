@@ -13,6 +13,7 @@
   --gray-600: hsl(255, 11%, 22%);
   --gray-900: hsl(260, 8%, 14%);
   --bg-light: hsl(225, 33%, 95%);
+  --bg-gray: hsl(0, 0%, 85%);
 
   /* font */
   --family: 'Poppins', sans-serif;
@@ -27,16 +28,14 @@ body[data-theme='dark'] {
   --colors-text: hsl(0, 0%, 100%);
   --colors-bg: hsl(207, 26%, 17%);
   --colors-ui-base: hsl(209, 23%, 22%);
-
-  --shadow: rgba(245, 245, 245, 0.2) 0 0 8px;
+  --colors-bg-svg-working: var(--bg-gray);
 }
 
 body[data-theme='light'] {
   --colors-text: hsl(200, 15%, 8%);
   --colors-bg: hsl(0, 0%, 98%);
   --colors-ui-base: hsl(0, 0%, 100%);
-
-  --shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  --colors-bg-svg-working: var(--bg-light);
 }
 
 body {

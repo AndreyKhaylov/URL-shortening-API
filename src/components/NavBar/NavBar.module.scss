@@ -12,8 +12,19 @@
 }
 
 .logo {
+  width: 162px;
   margin-right: 2rem;
   cursor: pointer;
+
+  path {
+    fill: var(--colors-text);
+  }
+
+  &:hover {
+    path {
+      fill: var(--primary-300);
+    }
+  }
 }
 
 .burger {
@@ -21,6 +32,10 @@
   font-size: 1.75rem;
   color: var(--gray-300);
   cursor: pointer;
+
+  &:hover {
+    color: var(--gray-100);
+  }
 }
 
 .mobileMenu {
@@ -36,7 +51,7 @@
   border-radius: var(--radii);
   padding: 1.25rem;
 
-  & * {
-    color: white !important;
-  }
+  // & * {
+  //   color: white !important;
+  // }
 }

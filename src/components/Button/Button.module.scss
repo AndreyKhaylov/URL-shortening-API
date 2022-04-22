@@ -11,16 +11,6 @@
   transition: ease-in-out 350ms;
 }
 
-.link {
-  background-color: transparent;
-  color: var(--gray-300);
-
-  &:hover {
-    color: var(--gray-900);
-    background-color: transparent;
-  }
-}
-
 // sizes
 .small {
   line-height: 2.25;
@@ -39,6 +29,7 @@
 
 // variants
 .square {
+  color: var(--gray-900);
   border-radius: var(--radii-sm);
 }
 
@@ -56,6 +47,6 @@
   background-color: transparent;
 
   &:hover {
-    color: var(--gray-900);
+    color: var(--gray-100);
   }
 }

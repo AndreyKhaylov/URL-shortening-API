@@ -1,5 +1,5 @@
 .features {
-  background-color: var(--bg-light);
+  background-color: var(--colors-ui-base);
   padding: 3rem 0;
 
   text-align: center;
@@ -43,7 +43,7 @@
 .item {
   position: relative;
   z-index: 2;
-  background-color: #fff;
+  background-color: var(--colors-bg);
   border-radius: var(--radii-sm);
   padding: 5rem 1rem 1.25rem;
 

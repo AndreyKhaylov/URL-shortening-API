@@ -1,4 +1,5 @@
-import React, { FC } from 'react';
+import React, { FC, useState, useEffect } from 'react';
+import { BsMoonFill, BsMoon } from 'react-icons/bs';
 
 import { Button } from '../../';
 import { IMenuList } from '../NavBar'
@@ -12,10 +13,16 @@ interface MenuProps {
 }
 
 const Menu: FC<MenuProps> = ({ 
-  links = [], 
+  links = [],
   handleLogin, 
   handleSignup 
 }) => {
+
+  const [theme, setTheme] = useState<string>('light');
+
+  useEffect(() => {
+    document.body.setAttribute('data-theme', theme);
+  }, [theme])
 
   const token = null;
 
@@ -23,8 +30,13 @@ const Menu: FC<MenuProps> = ({
     console.log('Logout');
   };
 
+  const fetchThemes = theme === 'light' ? 'dark' : 'light'
+
+  const handleTheme = () => setTheme(fetchThemes);
+
   return (
     <div className={s.menu}>
+
       <div className={s.pages}>
         {links.map(({ url, text }, idx) => (
           <a key={idx} href={url} className={s.link}>
@@ -32,6 +44,18 @@ const Menu: FC<MenuProps> = ({
           </a>
         ))}
       </div>
+
+      <div 
+        className={s.theme}
+        onClick={handleTheme}
+      >
+          {theme === 'light' 
+            ? <BsMoonFill size='18px'/>
+            : <BsMoon size='18px'/>
+          }
+        <span>to {fetchThemes}</span>
+      </div>
+
       <div className={s.login}>
         {token ? (
           <Button onClick={handleLogout}>
@@ -48,6 +72,7 @@ const Menu: FC<MenuProps> = ({
           </>
         )}
       </div>
+
     </div>
   );
 }
