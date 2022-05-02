@@ -36,10 +36,10 @@ const FormShorten = () => {
         <form
           onSubmit = {handleSubmit(onSubmit)}
           className={s.form}
-          autoComplete='off'>
-
+          autoComplete='off'
+        >
           <input
-            type='url'
+            type='text'
             className={s.input}
             placeholder='Shorten a link here...'
             disabled={loading === 'loading'}
@@ -52,7 +52,7 @@ const FormShorten = () => {
             }) 
             }
             style={{
-              outlineColor: errors.url ? 'var(--secondary-300)' : 'currentcolor',
+              outlineColor: errors.url ? 'var(--secondary-300)' : 'currentColor',
               outlineWidth: errors.url ? '4px' : '1px',
             }}
           />
