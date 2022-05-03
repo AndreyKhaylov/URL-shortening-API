@@ -33,6 +33,7 @@ Users should be able to:
 - Copy the shortened link to their clipboard in a single click
 - Receive an error message when the `form` is submitted if:
   - The `input` field is empty
+- Switch light to dark theme
 
 ### Links
 
@@ -52,7 +53,7 @@ Users should be able to:
 - [Framer Motion](https://www.framer.com/motion/) - React Animation library
 - [Axios](https://axios-http.com/) - Promise based HTTP client for the browser
 - [ESlint](https://eslint.org/) - Find and fix problems in JavaScript code
-- [prettier](https://prettier.io/) - Opinionated code formatter
+- [Prettier](https://prettier.io/) - Opinionated code formatter
 
 ## Author
 
